@@ -1,4 +1,4 @@
-package com.ibaevzz.counter
+package com.ibaevzz.counter.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
