@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:id="@+id/layout">
+
+    <TextView
+        android:id="@+id/minus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/circle_button"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="-"
+        android:textColor="@color/text_color"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_centerInParent="true"
+        android:textColor="@color/text_color"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/plus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/circle_button"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:text="+"
+        android:textColor="@color/text_color"
+        android:textSize="20dp"/>
+</RelativeLayout>

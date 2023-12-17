@@ -9,15 +9,15 @@ import java.util.*
 
 object CounterRepository {
     private lateinit var applicationContext: Context
-    private val database by lazy{
-        Room.databaseBuilder(applicationContext, CounterDatabase::class.java, "counter_db").build()
-    }
-    private val counterDao by lazy{
-        database.getCounterDao()
-    }
+    private lateinit var counterDao: CounterDao
+    private lateinit var database: CounterDatabase
 
     fun init(context: Context) {
-        applicationContext = context
+        if(!::counterDao.isInitialized) {
+            applicationContext = context
+            database = Room.databaseBuilder(applicationContext, CounterDatabase::class.java, "counter_db").build()
+            counterDao = database.getCounterDao()
+        }
     }
 
     suspend fun addCount(count: CounterEntity){

@@ -8,6 +8,17 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Counter">
+        <receiver
+            android:name=".CountWidget"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/count_widget_info" />
+        </receiver>
+
         <activity
             android:name=".ui.CountActivity"
             android:exported="false" />
